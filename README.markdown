@@ -1,16 +1,23 @@
 # Kindle Helper Scripts
 
-When I got my kindle, I started adding highlights and annotations, but wanted to get them out of my kindle, and into separate text files (which was a convention I'd been using for a while). 
+About three years ago I got a kindle. And I started highlighting text and adding notes. But I didn't want to view those highlights/notes just through the website so I did a bit of hunting. In the documents folder of a kindle there is a file named 'My Clippings.txt'. This contains all highlights, notes and bookmarks made on the device.
 
-[This blog post](http://jane.dallaway.com/kindle-getting-the-notes-and-highlights-for-a) explains the history and the things I tried and this repo contains the applescript file that I am currently using.
+I decided to parse this clippings file and output all the notes relating to a specific book into a single text file. So if I had 5 books I had 5 text files. I can then import the notes in to evernote if I wish.
 
-## The original aims were
-1. To use the My Clippings.txt file so I got all the highlights/annotations
-2. To produce a text file per book listing highlights and annotations ordered by location
-3. Optionally add the location to the end of the highlight/annotation
+[This blog post](http://jane.dallaway.com/kindle-getting-the-notes-and-highlights-for-a) describes the history in greater detail than this readme.
 
-This script achieves all of these
+[This blog post](http://jane.dallaway.com/kindle-helper-scripts-now-in-ruby) explains the update made to switch to a ruby version. It is much quicker to execute. And is a more familiar language for me to code with. It requires ruby version 2.0+. I have tested it against v 2.1.2.
 
-## Known Issues
+There are three arguments for the ruby version. The first 2 are mandatory.  
+
+1. The path to the My Clippings.txt file (I'd recommend copying it on to your computer and accessing it from there)
+2. The path to the output folder  
+3. (Optional)An indicator that you want to have locations appended to the highlights.   
+
+If you have a choice, use the ruby version.
+
+## Known Issues - Applescript
 1. For large My Clippings.txt files, it takes quite a long time and is quite memory hungry. I've tried to do some memory clean-up but applescript isn't something I'm all that familiar with
- 
+
+## Known Issues - Ruby
+None as yet 
